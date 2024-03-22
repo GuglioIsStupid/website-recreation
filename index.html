@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guglio's Site</title>
+    <meta name="description" content="Guglio's Site">
+    <meta name="keywords" content="Guglio, Guglio's Site, Portfolio">
+    <meta name="author" content="Guglio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Bootstraps from web cdn -->
+    <!--Reset.css too-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="mainApp">
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; text-align: center; height: 96px; margin-top: 100px;">
+            <!-- <img src="img/ballslol.jpg" alt="GuglioIsStupid" id="ballslol" style="width: 128px; height: 128px; border-radius: 50%; border: 2px solid #222; margin-bottom: 25px;"> --> <!-- Image is added later with js. So add placeholder with name "ballslol"-->
+            <img src="img/ballslol.jpg" alt="GuglioIsStupid" id="ballslol" style="width: 128px; height: 128px; border-radius: 50%; border: 2px solid #222; margin-bottom: 25px;">
+            <script>
+            function GetDiscordInfo() {
+                //get https://api.leaked.wiki/discorduser?id=705138718926700744 json data
+                fetch("https://api.leaked.wiki/discorduser?id=705138718926700744")
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    document.getElementById("ballslol").src = data.avatar;
+                });
+            }
+
+            GetDiscordInfo();
+            </script>
+            <p style="font-size: 2rem; font-weight: 700; color: #fff;">GuglioIsStupid</p>
+            <p style="font-size: 1.5rem; color: #cdcaca;">I'm a stupid person who likes to code.</p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; text-align: center; height: 96px; margin-top: 75px;">
+            <p style="font-size: 2rem; font-weight: 700; color: #fff;">Socials</p>
+        </div>
+
+        <!--Line seperator-->
+        <div style="width: 100%; height: 1px; background-color: #fff; margin-top: 25px;"></div>
+
+        <div class="grid" style="margin-top: 25px;">
+           
+            <!--Open in new tab-->
+            <button class="socialMediaIcon" onclick='window.open("https://https://discord.gg/ehY5gMMPW8", "_blank")'>
+                <img src="img/discord.png" alt="Discord" style="width: 64px; height: 64px; border-radius: 50%; border: 2px solid #222; margin-right: 16px;">
+                <div style="font-size: 1.5rem; font-weight: 700; color: #fff;">
+                    Discord
+                    <p style="font-size: 1rem; font-weight: 400; color: #bfbdbd;">@guglioisstupid</p>
+                </div>
+            </button>
+
+            <button class="socialMediaIcon" onclick='window.open("https://github.com/GuglioIsStupid", "_blank")'>
+                <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="Github" style="width: 64px; height: 64px; border-radius: 50%; border: 2px solid #222; margin-right: 16px;">
+                <div style="font-size: 1.5rem; font-weight: 700; color: #fff;">
+                    Github
+                    <p style="font-size: 1rem; font-weight: 400; color: #bfbdbd;">@GuglioIsStupid</p>
+                </div>
+            </button>
+            
+            <button class="socialMediaIcon" onclick='window.open("https://twitter.com/GuglioIsStupid", "_blank")'>
+                <img src="https://seeklogo.com/images/T/twitter-icon-square-logo-108D17D373-seeklogo.com.png" alt="Twitter" style="width: 64px; height: 64px; border-radius: 50%; border: 2px solid #222; margin-right: 16px;">
+                <div style="font-size: 1.5rem; font-weight: 700; color: #fff;">
+                    Twitter
+                    <p style="font-size: 1rem; font-weight: 400; color: #bfbdbd;">@GuglioIsStupid</p>
+                </div>
+            </button>
+
+            <button class="socialMediaIcon" onclick='window.open("https://twitter.com/GuglioIsStupid", "_blank")'>
+                <img src="https://seeklogo.com/images/T/twitter-icon-square-logo-108D17D373-seeklogo.com.png" alt="Twitter" style="width: 64px; height: 64px; border-radius: 50%; border: 2px solid #222; margin-right: 16px;">
+                <div style="font-size: 1.5rem; font-weight: 700; color: #fff;">
+                    AGORI
+                    <p style="font-size: 1rem; font-weight: 400; color: #bfbdbd;">@GuglioIsStupid@social.agori.dev</p>
+                </div>
+            </button>
+
+        </div>
+    </div>
+</body>
+</html>
+
